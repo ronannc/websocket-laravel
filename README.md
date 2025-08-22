@@ -59,3 +59,19 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# Exemplo WebSocket Laravel
+
+## Passos para testar
+
+1. Certifique-se que o ambiente docker está rodando.
+2. Compile os assets JS (se necessário).
+3. Abra o console do navegador e carregue `resources/js/websocket-example.js`.
+4. Acesse `http://localhost/send-message` para disparar o evento.
+5. Veja a mensagem recebida no console.
+
+## Debug
+
+- O evento `MessageSent` é disparado na rota `/send-message`.
+- O cliente JS escuta o canal `chat` e exibe a mensagem recebida.
+- Verifique logs do laravel-echo-server para erros de conexão.
